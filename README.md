@@ -19,5 +19,5 @@
 
 ## Contributor
 
-Hyeseung Lee
-Hyunwoo Kang
+- Hyeseung Lee
+- Hyunwoo Kang
