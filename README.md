@@ -12,7 +12,7 @@
    - info: HDD 17GB, RAM 128GB, 
 5. ska04 (Desktop 5): for slave 3
    - info: HDD 17TB, RAM 128GB,
-6. ska04 (Desktop 5): for slave 3
+6. ska04 (Desktop 5): for slave 4
    - info: HDD, RAM, cores
  
 ## Milestones
