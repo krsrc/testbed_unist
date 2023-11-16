@@ -3,7 +3,7 @@
 ## Resources
 
 1. ska00 (Desktop 1): for AAI
-   info: HDD 13TB, RAM 128GB, 16 cores
+   - info: HDD 13TB, RAM 128GB, 16 cores
 2. ska01 (Desktop 2): for master of Kubernetes cluster
    info: HDD 33TB, RAM 256GB, 22 cores
 3. ska02 (Desktop 3): for slave 1
