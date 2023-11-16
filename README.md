@@ -17,13 +17,13 @@
  
 ## Milestones
 
-(examples)
-- [ ] Install INDIGO IAM on xx1
+- [ ] Install INDIGO IAM on ska00
 - [ ] Connect INDIGO IAM and KAFE
-- [ ] Install Kubernetes on xx2
-- [ ] Install Rancher on xx2
-- [ ] Install JupyterHub on xx2
-- [ ] Install CANFAR on xx2
+- [ ] Install Kubernetes on ska01
+- [ ] Install Rancher on ska01
+- [ ] Install JupyterHub on ska01
+- [ ] Connect INDIGO IAM and JupyterHub
+- [ ] Install CANFAR on ska01
 
 ## Contributor
 
