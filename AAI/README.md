@@ -1,4 +1,4 @@
-![image](https://github.com/krsrc/testbed_unist/assets/139738228/9f37f6fc-9d41-47f5-ad88-d00382b1ef9b)# AAI - INDIGO IAM
+# AAI - INDIGO IAM
 
 ## Requirements
 - firewall (ex.ufw,firewalld)
