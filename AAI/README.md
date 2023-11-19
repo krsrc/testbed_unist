@@ -1,6 +1,12 @@
-# AAI on UNIST testbed
+# AAI - INDIGO IAM
 
-## Milestones
+## Prerequisites
+
+- X.509 certificate
+- NGINX server
+- MariaBD/MySQL database instance
+- JSON keystore
+
 
 ## Installation
 
