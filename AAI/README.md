@@ -6,14 +6,16 @@
 - if necessary, private certificates
 
 ## Installation
-### 1. set up proxy server   
+### STEP1. set up proxy server   
 
 - install NGINX   
 ```
 $ sudo apt install nginx
 ```
 
-- allow NGINX at firewall (here,example of case of ufw)   
+- allow NGINX at firewall
+> [!NOTE]   
+> case of ufw
 ```
 $ sudo ufw app list
 Available applications:
@@ -58,7 +60,7 @@ CGroup: /system.slice/nginx.service
  ![image](https://github.com/krsrc/testbed_unist/assets/139738228/d74a2b6f-4e6b-49bf-8bf7-14f5a889ac75)
 
 
-### 2. certificates   
+### STEP2. certificates   
 - install snap   
 ```
 $ sudo snap install core; sudo snap refresh core
@@ -94,6 +96,9 @@ $ sudo ufw allow 'Nginx Full'
 $ sudo ufw delete allow 'Nginx HTTP'
 ```
 
+> [!NOTE]
+> skip intermediate steps for generating certificates when using private ones.
+
 - stop NGINX   
 ```
 $ sudo systemctl stop nginx
@@ -104,38 +109,48 @@ $ sudo systemctl stop nginx
 $ sudo vi /etc/nginx/sites-available/defualt
 ```   
 
-```
+<pre>
 server {
   listen        443 ssl;
-  server_name   Your_HOSTNAME_Here;
+  server_name   <b>Your_HOSTNAME_Here</b>;
   access_log    /var/log/nginx/iam.access.log combined;
 
   ssl_on;
   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-  ssl_certificate      /path/to/your/ssl/cert.pem;
-  ssl_certificate_key  /path/to/your/ssl/key.pem;
+  ssl_certificate      <b>/PATH_TO_YOUR_SSL/</b>cert.pem;
+  ssl_certificate_key  <b>/PATH_TO_YOUR_SSL/</b>key.pem;
 
   location / {
-    proxy_pass              http://THE_IAM_APP_HOSTNAME_HERE:8080;
+    proxy_pass              http://<b>THE_IAM_APP_HOSTNAME_HERE</b>:8080;
     proxy_set_header        X-Real-IP $remote_addr;
     proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header        X-Forwarded-Proto https;
     proxy_set_header        Host $http_host;
   }
 }
-```
+</pre>
 
 - restart NGINX
 ```
 $ sudo systemctl restart nginx
 ```
 
-### 3. Database
+### STEP3. Database   
+- install MariaDB
+```
+$ sudo apt install mariadb-server
+```
+
+- configure MariaDB
+```
+$ sudo mysql_secure_installation
+```
 
 
-### 4. JSON Web Keys
 
-### 5. INDIGO IAM
+### STEP4. JSON Web Keys
+
+### STEP5. INDIGO IAM
 
 
 ## Link
